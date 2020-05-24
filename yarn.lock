@@ -13905,6 +13905,11 @@ vuepress@0.14.x:
     webpackbar "^2.6.1"
     workbox-build "^3.1.0"
 
+vuesax@^4.0.1-alpha.18:
+  version "4.0.1-alpha.18"
+  resolved "https://registry.yarnpkg.com/vuesax/-/vuesax-4.0.1-alpha.18.tgz#f10b6fa7e5eda1093b18c42b49dc9f17d39fc9e5"
+  integrity sha512-uvyFJ+7ukcPorRsBRGNEvNOP8XlG3USP6YeD/nhwPrBfTpvB9BHgorl06NzInAIJ+b7ERfNUU1kIRdfgE7EUdg==
+
 vuex@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.1.0.tgz#634b81515cf0cfe976bd1ffe9601755e51f843b9"
