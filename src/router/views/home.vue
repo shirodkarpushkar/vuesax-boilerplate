@@ -22,15 +22,11 @@
                   <h4 class="mb-4">Login</h4>
                   <p>Welcome back, please login to your account.</p>
                 </div>
-                <vs-input
-                  name="phoneNumber"
-                  icon="icon icon-user"
-                  icon-pack="feather"
-                  label-placeholder="Mobile"
-                  v-model="phoneNumber"
-                  @input="$v.phoneNumber.$touch()"
-                  class="w-full no-icon-border"
-                />
+                <vs-input v-model="phoneNumber" placeholder="Phone Number">
+                  <template #icon>
+                    <i class="bx bx-user"></i>
+                  </template>
+                </vs-input>
                 <span
                   v-if="!$v.phoneNumber.required && $v.phoneNumber.$dirty"
                   class="text-danger text-sm"
@@ -56,9 +52,7 @@
                   <vs-checkbox v-model="checkbox_remember_me" class="mb-3"
                     >Remember Me</vs-checkbox
                   >
-                  <router-link
-                    >Forgot Password?</router-link
-                  >
+                  <router-link>Forgot Password?</router-link>
                 </div>
                 <div class="flex justify-between">
                   <vs-button @click="">Register</vs-button>
@@ -70,10 +64,7 @@
                     <p>Want to Register as a bussiness partner ?</p>
                   </div>
                   <div class="w-full ">
-                    <vs-button
-                      @click=""
-                      class="w-full"
-                      color="#eb5424"
+                    <vs-button @click="" class="w-full" color="#eb5424"
                       >Register Bussiness</vs-button
                     >
                   </div>
@@ -103,8 +94,7 @@ export default {
   },
 
   computed: {},
-  methods: {
-  },
+  methods: {},
   validations: {
     phoneNumber: {
       required,
