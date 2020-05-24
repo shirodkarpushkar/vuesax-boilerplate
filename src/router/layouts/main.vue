@@ -4,22 +4,14 @@
   </div>
 </template>
 <script>
-import AppEvents from '@/src/event'
+import AppEvents from '@src/event'
 export default {
   data() {
-    return {
-
-    }
+    return {}
   },
-  methods: {
-
-  },
-  created() {
-
-  },
+  methods: {},
+  created() {},
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

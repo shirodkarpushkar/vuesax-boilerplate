@@ -65,19 +65,20 @@
                 >
                 <vs-button class="float-right" @click="login">Login</vs-button>
 
-                <vs-divider>OR</vs-divider>
-                  <div class="flex flex-wrap justify-between items-center">
-                <div class="w-full text-center mb-4">
-                  <p >Want to Register as a bussiness partner ?</p>
-                </div>
-                <div class="w-full ">
-                  <vs-button @click="registerBussiness" class="w-full" color="#eb5424"
-                    >Register Bussiness</vs-button
-                  >
+                <div class="flex flex-wrap justify-between items-center">
+                  <div class="w-full text-center mb-4">
+                    <p>Want to Register as a bussiness partner ?</p>
+                  </div>
+                  <div class="w-full ">
+                    <vs-button
+                      @click="registerBussiness"
+                      class="w-full"
+                      color="#eb5424"
+                      >Register Bussiness</vs-button
+                    >
+                  </div>
                 </div>
               </div>
-              </div>
-
             </div>
           </div>
         </div>
@@ -105,7 +106,7 @@ export default {
   methods: {
     registerBussiness() {
       this.$router.push({
-        name:'register-bussiness'
+        name: 'register-bussiness',
       })
     },
     login() {
