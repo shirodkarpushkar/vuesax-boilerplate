@@ -31,6 +31,7 @@ export default {
 
 body {
   font-family: 'Jost', sans-serif;
+  margin: 0;
 }
 
 #nprogress .bar {

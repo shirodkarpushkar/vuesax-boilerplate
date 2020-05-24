@@ -67,11 +67,7 @@ export default {
 </template>
 
 <style scoped>
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+
 
 .main-bg::after {
   background-color: #fef5e4;
