@@ -14,7 +14,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="navbar-collapse collapse" id="navbarsExampleDefault" >
+      <div class="navbar-collapse collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#"
@@ -85,6 +85,14 @@
 
       <div class="container">
         <!-- Example row of columns -->
+        <div class="center content-inputs">
+          <vs-input v-model="value" placeholder="Name" />
+        </div>
+        <div class="center">
+          <vs-checkbox v-model="option">
+            Option
+          </vs-checkbox>
+        </div>
         <div class="row">
           <div class="col-md-4">
             <h2>Heading</h2>
