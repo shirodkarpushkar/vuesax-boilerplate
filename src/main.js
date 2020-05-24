@@ -11,6 +11,8 @@ import Vuesax from 'vuesax'
 
 import 'swiper/dist/css/swiper.css'
 import 'vuesax/dist/vuesax.css' //Vuesax styles
+import './assets/css/iconfont.css'
+import './assets/css/main.css';
 
 Vue.use(Vuesax)
 Vue.use(VueLazyLoad)
