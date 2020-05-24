@@ -60,10 +60,10 @@
                     >Forgot Password?</router-link
                   >
                 </div>
-                <vs-button type="border" @click="registerUser"
-                  >Register</vs-button
-                >
-                <vs-button class="float-right" @click="login">Login</vs-button>
+                <div class="flex justify-between">
+                  <vs-button @click="registerUser">Register</vs-button>
+                  <vs-button @click="login">Login</vs-button>
+                </div>
 
                 <div class="flex flex-wrap justify-between items-center">
                   <div class="w-full text-center mb-4">

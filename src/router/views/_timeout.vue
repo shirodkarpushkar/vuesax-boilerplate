@@ -13,12 +13,9 @@ export default {
 </script>
 
 <template>
-  <Layout>
-    <h1 :class="$style.title">
-      The page timed out while loading. Are you sure you're still connected to
-      the Internet?
-    </h1>
-  </Layout>
+  <div>
+    Timeout
+  </div>
 </template>
 
 <style lang="scss" module>
