@@ -23,9 +23,7 @@
                   <p>Welcome back, please login to your account.</p>
                 </div>
                 <vs-input v-model="phoneNumber" placeholder="Phone Number">
-                  <template #icon>
-                    <i class="bx bx-user"></i>
-                  </template>
+                  
                 </vs-input>
                 <span
                   v-if="!$v.phoneNumber.required && $v.phoneNumber.$dirty"
