@@ -13,6 +13,7 @@ import 'swiper/dist/css/swiper.css'
 import 'vuesax/dist/vuesax.css' //Vuesax styles
 import './assets/css/iconfont.css'
 import './assets/css/main.css';
+import './globalComponents.js'// Globally Registered Components
 
 Vue.use(Vuesax)
 Vue.use(VueLazyLoad)
