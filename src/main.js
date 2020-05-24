@@ -8,11 +8,12 @@ import Toasted from 'vue-toasted'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import Vuesax from 'vuesax'
 
-
+import 'material-icons/iconfont/material-icons.css' //Material Icons
 import 'swiper/dist/css/swiper.css'
 import 'vuesax/dist/vuesax.css' //Vuesax styles
 import './assets/css/iconfont.css'
 import './assets/css/main.css';
+import './assets/scss/main.scss' // Styles: SCSS
 import './globalComponents.js'// Globally Registered Components
 
 Vue.use(Vuesax)
