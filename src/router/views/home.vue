@@ -56,13 +56,13 @@
                   <vs-checkbox v-model="checkbox_remember_me" class="mb-3"
                     >Remember Me</vs-checkbox
                   >
-                  <router-link to="/forgot-password"
+                  <router-link
                     >Forgot Password?</router-link
                   >
                 </div>
                 <div class="flex justify-between">
-                  <vs-button @click="registerUser">Register</vs-button>
-                  <vs-button @click="login">Login</vs-button>
+                  <vs-button @click="">Register</vs-button>
+                  <vs-button @click="">Login</vs-button>
                 </div>
 
                 <div class="flex flex-wrap justify-between items-center">
@@ -71,7 +71,7 @@
                   </div>
                   <div class="w-full ">
                     <vs-button
-                      @click="registerBussiness"
+                      @click=""
                       class="w-full"
                       color="#eb5424"
                       >Register Bussiness</vs-button
