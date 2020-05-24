@@ -6,9 +6,13 @@ import Vuelidate from 'vuelidate'
 import VueLazyLoad from 'vue-lazyload'
 import Toasted from 'vue-toasted'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-// require styles
-import 'swiper/dist/css/swiper.css'
+import Vuesax from 'vuesax'
 
+
+import 'swiper/dist/css/swiper.css'
+import 'vuesax/dist/vuesax.css' //Vuesax styles
+
+Vue.use(Vuesax)
 Vue.use(VueLazyLoad)
 Vue.use(Vuelidate)
 Vue.use(Toasted)
