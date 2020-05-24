@@ -1,162 +1,202 @@
 <template>
-  <div>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button
-        class="navbar-toggler collapsed"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="navbar-collapse collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >Disabled</a
-            >
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="dropdown01"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Dropdown</a
-            >
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+  <div
+    class="h-screen flex w-full bg-img vx-row no-gutter items-center justify-center"
+    id="page-login"
+  >
+    <div class="vx-col sm:w-1/2 md:w-1/2 lg:w-3/4 xl:w-3/5 sm:m-0 ">
+      <vx-card>
+        <div slot="no-body" class="full-page-bg-color">
+          <div class="vx-row no-gutter justify-center items-center">
+            <div class="vx-col sm:w-full md:w-full lg:block lg:w-1/2 ">
+              <img
+                src="@assets/images/pages/login.png"
+                alt="register"
+                class="w-full object-cover mx-auto"
+              />
             </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="text"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
-            >Search</button
-          >
-        </form>
-      </div>
-    </nav>
+            <div
+              class="vx-col sm:w-full md:w-full lg:w-1/2 d-theme-dark-bg h-36"
+            >
+              <div class="p-8">
+                <div class="vx-card__title mb-8">
+                  <h4 class="mb-4">Login</h4>
+                  <p>Welcome back, please login to your account.</p>
+                </div>
+                <vs-input
+                  name="phoneNumber"
+                  icon="icon icon-user"
+                  icon-pack="feather"
+                  label-placeholder="Mobile"
+                  v-model="phoneNumber"
+                  @input="$v.phoneNumber.$touch()"
+                  class="w-full no-icon-border"
+                />
+                <span
+                  v-if="!$v.phoneNumber.required && $v.phoneNumber.$dirty"
+                  class="text-danger text-sm"
+                >
+                  phoneNumber is required.
+                </span>
 
-    <main role="main">
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <div class="container">
-          <h1 class="display-3">Hello, world!</h1>
-          <p
-            >This is a template for a simple marketing or informational website.
-            It includes a large callout called a jumbotron and three supporting
-            pieces of content. Use it as a starting point to create something
-            more unique.</p
-          >
-          <p
-            ><a class="btn btn-primary btn-lg" href="#" role="button"
-              >Learn more »</a
-            ></p
-          >
-        </div>
-      </div>
+                <vs-input
+                  type="password"
+                  name="password"
+                  icon="icon icon-lock"
+                  icon-pack="feather"
+                  label-placeholder="Password"
+                  v-model="password"
+                  @input="$v.password.$touch()"
+                  class="w-full mt-6 no-icon-border"
+                />
+                <span v-if="$v.password.$error" class="text-danger text-sm">
+                  Password is required.
+                </span>
 
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="center content-inputs">
-          <vs-input v-model="value" placeholder="Name" />
-        </div>
-        <div class="center">
-          <vs-checkbox v-model="option">
-            Option
-          </vs-checkbox>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p
-              >Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-              fermentum massa justo sit amet risus. Etiam porta sem malesuada
-              magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p
-              ><a class="btn btn-secondary" href="#" role="button"
-                >View details »</a
-              ></p
-            >
-          </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p
-              >Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-              fermentum massa justo sit amet risus. Etiam porta sem malesuada
-              magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p
-              ><a class="btn btn-secondary" href="#" role="button"
-                >View details »</a
-              ></p
-            >
-          </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p
-              >Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
-              egestas eget quam. Vestibulum id ligula porta felis euismod
-              semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-              condimentum nibh, ut fermentum massa justo sit amet risus.</p
-            >
-            <p
-              ><a class="btn btn-secondary" href="#" role="button"
-                >View details »</a
-              ></p
-            >
+                <div class="flex flex-wrap justify-between my-5">
+                  <vs-checkbox v-model="checkbox_remember_me" class="mb-3"
+                    >Remember Me</vs-checkbox
+                  >
+                  <router-link to="/forgot-password"
+                    >Forgot Password?</router-link
+                  >
+                </div>
+                <vs-button type="border" @click="registerUser"
+                  >Register</vs-button
+                >
+                <vs-button class="float-right" @click="login">Login</vs-button>
+
+                <vs-divider>OR</vs-divider>
+                  <div class="flex flex-wrap justify-between items-center">
+                <div class="w-full text-center mb-4">
+                  <p >Want to Register as a bussiness partner ?</p>
+                </div>
+                <div class="w-full ">
+                  <vs-button @click="registerBussiness" class="w-full" color="#eb5424"
+                    >Register Bussiness</vs-button
+                  >
+                </div>
+              </div>
+              </div>
+
+            </div>
           </div>
         </div>
-
-        <hr />
-      </div>
-      <!-- /container -->
-    </main>
-    <footer class="container">
-      <p>© Company 2017-2019</p>
-    </footer>
+      </vx-card>
+    </div>
   </div>
 </template>
 
 <script>
+import { required } from 'vuelidate/lib/validators'
 export default {
   page: {
     title: 'Home',
     meta: [{ name: 'description', content: 'Home' }],
   },
-  components: {},
   data() {
-    return {}
+    return {
+      phoneNumber: '9876543210',
+      password: 'demodemo',
+      checkbox_remember_me: false,
+    }
+  },
+
+  computed: {},
+  methods: {
+    registerBussiness() {
+      this.$router.push({
+        name:'register-bussiness'
+      })
+    },
+    login() {
+      this.$v.$touch()
+      if (!this.$v.$invalid) {
+        let userDetails = {
+          email: this.email,
+          password: this.password,
+        }
+        console.log('login -> userDetails', userDetails)
+
+        //this.$store.dispatch('auth/loginAttempt', payload)
+      }
+    },
+
+    loginAuth0() {
+      if (this.$store.state.auth.isUserLoggedIn()) {
+        this.notifyAlreadyLogedIn()
+        return false
+      }
+      this.$auth.login({ target: this.$route.query.to })
+    },
+
+    // Google login
+    loginWithGoogle() {
+      this.$store.dispatch('auth/loginWithGoogle', { notify: this.$vs.notify })
+    },
+
+    // Facebook login
+    loginWithFacebook() {
+      this.$store.dispatch('auth/loginWithFacebook', {
+        notify: this.$vs.notify,
+      })
+    },
+
+    // Twitter login
+    loginWithTwitter() {
+      this.$store.dispatch('auth/loginWithTwitter', { notify: this.$vs.notify })
+    },
+
+    // Github login
+    loginWithGithub() {
+      this.$store.dispatch('auth/loginWithGithub', { notify: this.$vs.notify })
+    },
+
+    notifyAlreadyLogedIn() {
+      this.$vs.notify({
+        title: 'Login Attempt',
+        text: 'You are already logged in!',
+        iconPack: 'feather',
+        icon: 'icon-alert-circle',
+        color: 'warning',
+      })
+    },
+    registerUser() {
+      // if (this.$store.state.auth.isUserLoggedIn()) {
+      //   this.notifyAlreadyLogedIn()
+      //   return false
+      // }
+      this.$router.push('/register')
+    },
+  },
+  validations: {
+    phoneNumber: {
+      required,
+    },
+    password: {
+      required,
+    },
   },
 }
 </script>
+
+<style lang="scss" scoped>
+#page-login {
+  .social-login {
+    .bg-facebook {
+      background-color: #1551b1;
+    }
+    .bg-twitter {
+      background-color: #00aaff;
+    }
+    .bg-google {
+      background-color: #4285f4;
+    }
+    .bg-github {
+      background-color: #333;
+    }
+  }
+}
+.h-36 {
+  height: 36rem;
+}
+</style>
